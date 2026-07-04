@@ -1,0 +1,35 @@
+/* SCAI Space — base reset & shared layout */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  position: relative; /* containing block for the full-page doodle layer */
+  font-family: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #eef4ff;
+  color: #0a1c46;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; border: none; background: none; cursor: pointer; padding: 0; }
+img, svg { display: block; max-width: 100%; }
+
+.page-main { position: relative; z-index: 1; }
+/* Keep footer above the z-index:0 doodle layer (positioned layers paint over static blocks) */
+[data-section="footer"] { position: relative; z-index: 1; }
+
+/* Reveal elements start visible when GSAP fails to load */
+.no-gsap .gs-reveal { opacity: 1 !important; transform: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
