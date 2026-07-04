@@ -1,0 +1,215 @@
+/* ============================================================
+   Footer — Figma node 1:1032 ("Footer")
+   Frosted white card on light page background.
+   ============================================================ */
+
+.footer,
+.footer * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 16px 40px;
+}
+
+/* Glass card, 1152 wide */
+.footer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 1152px;
+  max-width: 100%;
+  padding: 49px;
+  background-color: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  box-shadow:
+    0px 20px 45px 0px rgba(10, 28, 70, 0.28),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+}
+
+/* Top area: brand block + 3 link columns
+   Figma x-offsets: brand 0 (w 417.5), cols at 457.5 / 667 / 876.5 (w 177.5)
+   => 40px gap after brand, 32px between columns */
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 32px;
+}
+
+.footer-brand {
+  flex: 0 0 auto;
+  width: 417.5px;
+  margin-right: 8px; /* 32px gap + 8px = 40px total after brand */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.footer-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  background-image: linear-gradient(135deg,
+    rgb(31, 107, 255) 0%,
+    rgb(27, 116, 254) 7.1429%,
+    rgb(24, 124, 254) 14.286%,
+    rgb(20, 132, 253) 21.429%,
+    rgb(17, 140, 252) 28.571%,
+    rgb(15, 148, 251) 35.714%,
+    rgb(13, 155, 250) 42.857%,
+    rgb(12, 162, 249) 50%,
+    rgb(13, 169, 247) 57.143%,
+    rgb(15, 177, 246) 64.286%,
+    rgb(17, 184, 245) 71.429%,
+    rgb(21, 191, 243) 78.571%,
+    rgb(25, 197, 242) 85.714%,
+    rgb(29, 204, 240) 92.857%,
+    rgb(34, 211, 238) 100%);
+}
+
+.footer-logo-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.footer-logo-text {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 17.6px;
+  line-height: 26.4px;
+  letter-spacing: -0.352px;
+  color: #0a1c46;
+  white-space: nowrap;
+}
+
+.footer-logo-accent {
+  color: #1f6bff;
+}
+
+.footer-desc {
+  margin-top: 16px;
+  width: 384px;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14.4px;
+  line-height: 23.4px;
+  color: #5b6b90;
+}
+
+.footer-col {
+  flex: 0 0 auto;
+  width: 177.5px;
+}
+
+.footer-heading {
+  font-family: 'Sora', sans-serif;
+  font-weight: 500;
+  font-size: 15.2px;
+  line-height: 22.8px;
+  letter-spacing: -0.304px;
+  color: #0a1c46;
+  white-space: nowrap;
+}
+
+.footer-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.footer-list li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13.76px;
+  line-height: 20.64px;
+  color: #5b6b90;
+  white-space: nowrap;
+}
+
+.footer-list li + li {
+  margin-top: 8px;
+}
+
+/* Bottom copyright row */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 1px solid rgba(31, 107, 255, 0.14);
+  padding-top: 25px;
+}
+
+.footer-copyright {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13.12px;
+  line-height: 19.68px;
+  color: #5b6b90;
+  white-space: nowrap;
+}
+
+.footer-tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 13.12px;
+  line-height: 19.68px;
+  color: #5b6b90;
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .footer-card {
+    padding: 32px 24px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-list li {
+    white-space: normal;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-copyright,
+  .footer-tagline {
+    white-space: normal;
+  }
+}

@@ -1,0 +1,142 @@
+/* ============================================================
+   Section: Why Schools Choose SCAI Space  (slug: why)
+   Desktop content container: 1152px (page 1539px)
+   ============================================================ */
+
+.why {
+  padding: 112px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-container {
+  width: 1152px;
+  max-width: 100%;
+}
+
+/* ---------- Section heading ---------- */
+
+.why-heading {
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 27px;
+  padding: 5px 13px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(31, 107, 255, 0.22);
+  border-radius: 9999px;
+}
+
+.why-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #22d3ee;
+  flex-shrink: 0;
+}
+
+.why-eyebrow-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 11.52px;
+  line-height: 17.28px;
+  letter-spacing: 2.0736px;
+  text-transform: uppercase;
+  color: #1f6bff;
+  white-space: nowrap;
+}
+
+.why-title {
+  margin: 20px 0 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 500;
+  font-size: 46.4px;
+  line-height: 51.04px;
+  letter-spacing: -0.928px;
+  color: #0a1c46;
+}
+
+/* ---------- Cards grid ---------- */
+
+.why-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.why-card {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 244px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  box-shadow: 0px 20px 45px 0px rgba(10, 28, 70, 0.28),
+              inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+}
+
+.why-card-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+.why-tile-blue   { background: #1f6bff; }
+.why-tile-cyan   { background: #22d3ee; }
+.why-tile-green  { background: #17c07b; }
+.why-tile-orange { background: #ff7a1a; }
+
+.why-card-title {
+  margin: 16px 0 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 500;
+  font-size: 17.28px;
+  line-height: 25.92px;
+  letter-spacing: -0.3456px;
+  color: #0a1c46;
+}
+
+.why-card-text {
+  margin: 8px 0 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14.4px;
+  line-height: 23.4px;
+  color: #5b6b90;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+  .why {
+    padding: 64px 16px;
+  }
+
+  .why-title {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.64px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .why-card {
+    min-height: 0;
+  }
+}

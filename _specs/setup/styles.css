@@ -1,0 +1,203 @@
+/* ============================================================
+   Section: Built for Schools. Ready to Run.  (setup)
+   Figma node 1:889 — page width 1539px, content 1152px
+   ============================================================ */
+
+.setup {
+  padding: 112px 16px;
+}
+
+.setup-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* ---------- Section heading ---------- */
+
+.setup-heading {
+  max-width: 672px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.setup-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 13px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(31, 107, 255, 0.22);
+  border-radius: 9999px;
+}
+
+.setup-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22d3ee;
+  flex-shrink: 0;
+}
+
+.setup-eyebrow-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 11.52px;
+  line-height: 17.28px;
+  letter-spacing: 2.0736px;
+  text-transform: uppercase;
+  color: #1f6bff;
+  white-space: nowrap;
+}
+
+.setup-title {
+  margin: 20px 0 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 500;
+  font-size: 46.4px;
+  line-height: 51.04px;
+  letter-spacing: -0.928px;
+  color: #0a1c46;
+}
+
+.setup-subtitle {
+  margin: 16px 0 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16.8px;
+  line-height: 27.3px;
+  color: #5b6b90;
+}
+
+/* ---------- Timeline of 5 steps ---------- */
+
+.setup-timeline {
+  position: relative;
+  margin-top: 64px;
+  display: flex;
+  gap: 20.4px;
+}
+
+/* gradient connector line, centered on the 56px badges */
+.setup-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 27.5px;
+  height: 1px;
+  background: linear-gradient(90deg, #1f6bff 0%, #22d3ee 50%, #17c07b 100%);
+}
+
+.setup-step {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.setup-badge {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 0 rgba(31, 107, 255, 0.2),
+              0 14px 28px rgba(10, 28, 70, 0.5);
+}
+
+.setup-badge svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.setup-num {
+  position: absolute;
+  top: -8px;
+  left: 40px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ff7a1a;
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 11.2px;
+  line-height: 16.8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.setup-card {
+  margin-top: 20px;
+  width: 100%;
+  padding: 21px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 20px 45px rgba(10, 28, 70, 0.28),
+              inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.setup-card-title {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  color: #0a1c46;
+}
+
+.setup-card-text {
+  margin: 8px auto 0;
+  max-width: 172px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13.6px;
+  line-height: 22.1px;
+  color: #5b6b90;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+  .setup {
+    padding: 64px 16px;
+  }
+
+  .setup-title {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.64px;
+  }
+
+  .setup-timeline {
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .setup-line {
+    display: none;
+  }
+
+  .setup-step {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .setup-card-text {
+    max-width: 240px;
+  }
+}

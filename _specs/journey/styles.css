@@ -1,0 +1,186 @@
+/* Section: From Curiosity to Creation (Figma node 1:205) */
+/* Page background behind this section is a light periwinkle (~#e9eefb) set at page level, not here. */
+
+.journey {
+  width: 100%;
+  padding: 112px 16px;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.journey *,
+.journey *::before,
+.journey *::after {
+  box-sizing: border-box;
+}
+
+.journey-inner {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* ---------- Heading block ---------- */
+
+.journey-heading {
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.journey-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 27px;
+  padding: 5px 13px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(31, 107, 255, 0.22);
+  border-radius: 9999px;
+}
+
+.journey-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22d3ee;
+  flex-shrink: 0;
+}
+
+.journey-eyebrow-text {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-weight: 400;
+  font-size: 11.52px;
+  line-height: 17.28px;
+  letter-spacing: 2.0736px;
+  text-transform: uppercase;
+  color: #1f6bff;
+  white-space: nowrap;
+}
+
+.journey-title {
+  margin: 20px 0 0;
+  font-family: 'Sora', 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 46.4px;
+  line-height: 51.04px;
+  letter-spacing: -0.928px;
+  text-align: center;
+  color: #0a1c46;
+}
+
+.journey-subtitle {
+  margin: 16px auto 0;
+  max-width: 672px;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16.8px;
+  line-height: 27.3px;
+  text-align: center;
+  color: #5b6b90;
+}
+
+/* ---------- Step cards ---------- */
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journey-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  filter: drop-shadow(0px 16px 15px rgba(10, 28, 70, 0.5));
+}
+
+.journey-step-icon svg {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+.journey-step-icon-blue   { background: #1f6bff; }
+.journey-step-icon-cyan   { background: #22d3ee; }
+.journey-step-icon-orange { background: #ff7a1a; }
+.journey-step-icon-green  { background: #17c07b; }
+
+.journey-card {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 20px 45px 0px rgba(10, 28, 70, 0.28),
+              inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.journey-card-number {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-weight: 400;
+  font-size: 12.48px;
+  line-height: 18.72px;
+  letter-spacing: 1.248px;
+  color: #5b6b90;
+}
+
+.journey-card-title {
+  margin: 9px 0 0;
+  font-family: 'Sora', 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18.4px;
+  line-height: 27.6px;
+  letter-spacing: -0.368px;
+  color: #0a1c46;
+}
+
+.journey-card-text {
+  margin: 8px 0 0;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14.4px;
+  line-height: 23.4px;
+  color: #5b6b90;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+  .journey {
+    padding: 72px 16px;
+  }
+
+  .journey-title {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.64px;
+  }
+
+  .journey-subtitle {
+    font-size: 15.5px;
+    line-height: 25px;
+  }
+
+  .journey-steps {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

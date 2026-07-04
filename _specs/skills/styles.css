@@ -1,0 +1,198 @@
+/* ============================================================
+   Section: skills — "Skills Students Carry Beyond the Room"
+   Page width 1539px, content container 1152px, bg #eef4ff
+   ============================================================ */
+
+.skills {
+  padding: 112px 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.skills-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* ---------- Section heading ---------- */
+
+.skills-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 13px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(31, 107, 255, 0.22);
+  border-radius: 9999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.52px;
+  font-weight: 400;
+  line-height: 17.28px;
+  letter-spacing: 2.0736px;
+  text-transform: uppercase;
+  color: #1f6bff;
+  white-space: nowrap;
+}
+
+.skills-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #22d3ee;
+  flex-shrink: 0;
+}
+
+.skills-title {
+  margin: 20px 0 0;
+  font-family: 'Sora', sans-serif;
+  font-size: 46.4px;
+  font-weight: 600;
+  line-height: 51.04px;
+  letter-spacing: -0.928px;
+  color: #0a1c46;
+}
+
+.skills-subtitle {
+  margin: 16px 0 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16.8px;
+  font-weight: 400;
+  line-height: 27.3px;
+  color: #5b6b90;
+}
+
+/* ---------- Skills grid ----------
+   4 columns x 276px, rows 163 / 163 / 140, 16px gaps.
+   Row 1: Critical Thinking spans 2 cols; row 3 col 4 is empty. */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 163px 163px 140px;
+  gap: 16px;
+  margin-top: 56px;
+}
+
+.skills-card-critical      { grid-column: 1 / span 2; grid-row: 1; }
+.skills-card-ailiteracy    { grid-column: 3;          grid-row: 1; }
+.skills-card-robotics      { grid-column: 4;          grid-row: 1; }
+.skills-card-electronics   { grid-column: 1;          grid-row: 2; }
+.skills-card-communication { grid-column: 2;          grid-row: 2; }
+.skills-card-collaboration { grid-column: 3;          grid-row: 2; }
+.skills-card-creativity    { grid-column: 4;          grid-row: 2; }
+.skills-card-judgment      { grid-column: 1;          grid-row: 3; }
+.skills-card-problem       { grid-column: 2;          grid-row: 3; }
+.skills-card-selfdirection { grid-column: 3;          grid-row: 3; }
+
+/* ---------- Cards (light glass) ---------- */
+
+.skills-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 20px 45px 0px rgba(10, 28, 70, 0.28),
+              inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+}
+
+.skills-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.skills-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background-image: linear-gradient(135deg, #1f6bff 0%, #0ca2f9 50%, #22d3ee 100%);
+  flex-shrink: 0;
+}
+
+.skills-card-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.skills-card-title {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  font-size: 16.32px;
+  font-weight: 600;
+  line-height: 24.48px;
+  letter-spacing: -0.3264px;
+  color: #0a1c46;
+}
+
+.skills-card-text {
+  margin: 12px 0 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.08px;
+  font-weight: 400;
+  line-height: 22.88px;
+  color: #5b6b90;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 64px 16px;
+  }
+
+  .skills-heading {
+    max-width: 100%;
+  }
+
+  .skills-title {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.64px;
+  }
+
+  .skills-subtitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: auto;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .skills-card-critical,
+  .skills-card-ailiteracy,
+  .skills-card-robotics,
+  .skills-card-electronics,
+  .skills-card-communication,
+  .skills-card-collaboration,
+  .skills-card-creativity,
+  .skills-card-judgment,
+  .skills-card-problem,
+  .skills-card-selfdirection {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

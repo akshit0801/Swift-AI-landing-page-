@@ -1,0 +1,160 @@
+/* ============ NAV (Figma node 1:1101) ============ */
+/* Fixed glass navigation bar pinned to the top of the viewport,
+   floating 16px from the top edge, above all content (z-index 100).
+   Sits above the fixed .bg layer (z-index 0) and page content. */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px 16px 0;
+  pointer-events: none; /* wrapper only; bar re-enables */
+}
+
+.nav-bar {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 1152px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.55);
+  background-clip: padding-box;
+  box-shadow:
+    0px 20px 45px 0px rgba(10, 28, 70, 0.28),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+/* --- Brand --- */
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-image: linear-gradient(135deg, #1f6bff 0%, #0ca2f9 50%, #22d3ee 100%);
+  filter: drop-shadow(0px 8px 9px rgba(31, 107, 255, 0.7));
+}
+
+.nav-logo-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.nav-brand-text {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 17.6px;
+  line-height: 26.4px;
+  letter-spacing: -0.352px;
+  color: #0a1c46;
+  white-space: nowrap;
+}
+
+.nav-brand-accent {
+  color: #1f6bff;
+}
+
+/* --- Center links --- */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14.4px;
+  line-height: 21.6px;
+  color: #5b6b90;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* --- Action buttons --- */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15.2px;
+  line-height: 22.8px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-btn-explore {
+  padding: 12px 24px;
+  border: 1px solid rgba(31, 107, 255, 0.25);
+  color: #0a1c46;
+}
+
+.nav-btn-demo {
+  padding: 12px 24px;
+  background-color: #ff7a1a;
+  color: #ffffff;
+  filter: drop-shadow(0px 14px 15px rgba(255, 122, 26, 0.7));
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 12px 12px 0;
+  }
+
+  .nav-bar {
+    padding: 10px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-links {
+    display: none; /* no hamburger in the design; hide primary links on small screens */
+  }
+
+  .nav-btn-explore {
+    display: none;
+  }
+
+  .nav-btn-demo {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}

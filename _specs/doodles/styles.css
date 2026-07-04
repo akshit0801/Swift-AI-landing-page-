@@ -1,0 +1,45 @@
+/* Hand-drawn STEM doodle layer — full-page scrolling backdrop.
+   Sits above the fixed color washes (.bg, z-index 0) and behind content (z-index 1).
+   Stretched to full document height via top:0/bottom:0 against body{position:relative}. */
+.doodles {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.doodle {
+  position: absolute;
+  display: block;
+  color: #2f6fe0;
+  opacity: 0.5;
+}
+
+.doodle svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+
+/* Uniform hairline weight regardless of doodle size */
+.doodle svg * { vector-effect: non-scaling-stroke; }
+
+.doodle--soft  { opacity: 0.42; }
+.doodle--faint { opacity: 0.3; }
+.doodle--path svg path { stroke-dasharray: 5 9; }
+
+@media (max-width: 768px) {
+  .doodle { opacity: 0.3; }
+  .doodle--soft { opacity: 0.26; }
+  .doodle--m-hide { display: none; }
+}

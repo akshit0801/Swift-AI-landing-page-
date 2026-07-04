@@ -1,0 +1,453 @@
+/* ============ HERO (Figma node 1:6) ============ */
+/* Sits above the fixed .bg layer; below the fixed .nav. */
+
+.hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 160px 16px 96px;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  max-width: 1152px;
+  min-height: 683px;
+}
+
+/* --- Left column --- */
+
+.hero-left {
+  width: 566px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 13px;
+  border: 1px solid rgba(31, 107, 255, 0.22);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #22d3ee;
+  flex-shrink: 0;
+}
+
+.hero-eyebrow-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 11.52px;
+  line-height: 17.28px;
+  letter-spacing: 2.0736px;
+  text-transform: uppercase;
+  color: #1f6bff;
+  white-space: nowrap;
+}
+
+.hero-title {
+  margin: 24px 0 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 70.4px;
+  line-height: 68.992px;
+  letter-spacing: -1.408px;
+  color: #0a1c46;
+}
+
+.hero-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* In the design an empty line separates the two phrases:
+   gradient line starts one full line-height below line 1. */
+.hero-title-gradient {
+  display: block;
+  margin-top: 69px;
+  max-width: 520px;
+  background-image: linear-gradient(125.39deg, #0a1c46 6.17%, #1f6bff 54.38%, #22d3ee 93.83%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-lead {
+  margin: 24px 0 0;
+  max-width: 576px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18.4px;
+  line-height: 29.9px;
+  color: rgba(10, 28, 70, 0.8);
+}
+
+.hero-sub {
+  margin: 16px 0 0;
+  max-width: 576px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #5b6b90;
+}
+
+/* --- CTA buttons --- */
+
+.hero-cta {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15.2px;
+  line-height: 22.8px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-btn-primary {
+  padding: 12px 24px;
+  background-color: #ff7a1a;
+  color: #ffffff;
+  filter: drop-shadow(0px 14px 15px rgba(255, 122, 26, 0.7));
+}
+
+.hero-btn-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.hero-btn-glass {
+  padding: 12px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.55);
+  background-clip: padding-box;
+  color: #0a1c46;
+  box-shadow:
+    0px 20px 45px 0px rgba(10, 28, 70, 0.28),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* --- Stats row --- */
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.hero-stat-num {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.48px;
+  color: #0a1c46;
+  white-space: nowrap;
+}
+
+.hero-stat-label {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13.6px;
+  line-height: 20.4px;
+  color: #5b6b90;
+  white-space: nowrap;
+}
+
+/* --- Right glass card --- */
+
+.hero-card {
+  position: absolute;
+  left: 623px;
+  top: 82px;
+  width: 520px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 35.2px;
+  background-image: linear-gradient(140deg, rgba(255, 255, 255, 0.6) 3.67%, rgba(228, 236, 255, 0.4) 96.33%);
+  box-shadow:
+    0px 20px 45px -22px rgba(10, 28, 70, 0.3),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.hero-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hero-card-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-card-tag-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.hero-card-tag-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 11.52px;
+  line-height: 17.28px;
+  letter-spacing: 1.152px;
+  text-transform: uppercase;
+  color: #1f6bff;
+  white-space: nowrap;
+}
+
+.hero-card-dots {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+}
+
+.hero-dot-orange { background-color: #ff7a1a; }
+.hero-dot-cyan   { background-color: #22d3ee; }
+.hero-dot-green  { background-color: #17c07b; }
+
+/* --- Swiftee chat row --- */
+
+.hero-chat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.hero-chat-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-image: linear-gradient(135deg, #1f6bff 0%, #0ca2f9 50%, #22d3ee 100%);
+}
+
+.hero-chat-avatar-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.hero-chat-name {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 15.2px;
+  line-height: 22.8px;
+  letter-spacing: -0.304px;
+  color: #0a1c46;
+  white-space: nowrap;
+}
+
+.hero-chat-msg {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12.48px;
+  line-height: 18.72px;
+  color: #5b6b90;
+  white-space: nowrap;
+}
+
+/* --- Skill bars --- */
+
+.hero-skills {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.hero-skill + .hero-skill {
+  margin-top: 12px;
+}
+
+.hero-skill-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hero-skill-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12.48px;
+  line-height: 18.72px;
+  color: rgba(10, 28, 70, 0.8);
+  white-space: nowrap;
+}
+
+.hero-skill-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 12.48px;
+  line-height: 18.72px;
+  color: rgba(10, 28, 70, 0.8);
+  white-space: nowrap;
+}
+
+.hero-skill-track {
+  display: block;
+  width: 100%;
+  height: 8px;
+  margin-top: 4px;
+  border-radius: 9999px;
+  background-color: #e7eefb;
+  overflow: hidden;
+}
+
+.hero-skill-fill {
+  display: block;
+  height: 8px;
+  border-radius: 9999px;
+}
+
+.hero-skill-fill-blue  { background-color: #1f6bff; }
+.hero-skill-fill-cyan  { background-color: #22d3ee; }
+.hero-skill-fill-green { background-color: #17c07b; }
+
+/* --- Component chips (pinned to card bottom) --- */
+
+.hero-chips {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.hero-chip {
+  display: inline-block;
+  padding: 5px 11px;
+  border: 1px solid rgba(31, 107, 255, 0.2);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 11.52px;
+  line-height: 17.28px;
+  color: #0a1c46;
+  white-space: nowrap;
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 16px 64px;
+  }
+
+  .hero-container {
+    min-height: 0;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 44px;
+    line-height: 46px;
+    letter-spacing: -0.9px;
+  }
+
+  .hero-title-line {
+    white-space: normal;
+  }
+
+  .hero-title-gradient {
+    margin-top: 46px;
+  }
+
+  .hero-cta {
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 20px 28px;
+  }
+
+  .hero-card {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin-top: 48px;
+    padding: 20px;
+  }
+
+  .hero-chat-msg {
+    white-space: normal;
+  }
+
+  .hero-chips {
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+}
