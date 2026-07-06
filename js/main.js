@@ -266,6 +266,46 @@
     });
   });
 
+  /* ---------- Lightboxes: mission passport + Swiftee video ---------- */
+  (function () {
+    var boxes = document.querySelectorAll('[data-lightbox]');
+    if (!boxes.length) return;
+    var boxMap = {};
+    boxes.forEach(function (b) { boxMap[b.getAttribute('data-lightbox')] = b; });
+
+    var closeAll = function () {
+      boxes.forEach(function (b) {
+        b.setAttribute('data-open', 'false');
+        b.setAttribute('aria-hidden', 'true');
+        var video = b.querySelector('[data-lightbox-video]');
+        if (video) video.pause();
+      });
+    };
+
+    document.querySelectorAll('[data-lightbox-trigger]').forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var box = boxMap[trigger.getAttribute('data-lightbox-trigger')];
+        if (!box) return;
+        closeAll();
+        box.setAttribute('data-open', 'true');
+        box.setAttribute('aria-hidden', 'false');
+        var video = box.querySelector('[data-lightbox-video]');
+        if (video) {
+          video.currentTime = 0;
+          video.play().catch(function () {});
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-lightbox-close]').forEach(function (el) {
+      el.addEventListener('click', closeAll);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
+
   /* ---------- Nav: Contact-us dropdown ---------- */
   (function () {
     var contact = document.querySelector('[data-contact]');

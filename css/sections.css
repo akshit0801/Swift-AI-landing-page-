@@ -592,6 +592,41 @@
   backdrop-filter: blur(12px);
 }
 
+/* --- Certified-by logos --- */
+
+.hero-certified {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.hero-certified-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #8290b3;
+  white-space: nowrap;
+}
+
+.hero-certified-logos {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero-certified-logo {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  filter: grayscale(0.15);
+  transition: opacity 0.2s ease;
+}
+
+.hero-certified-logo:hover { opacity: 1; }
+
 /* --- Stats row --- */
 
 .hero-stats {
@@ -3847,6 +3882,52 @@ section[id] { scroll-margin-top: 96px; }
 
 .opmodel-chip img { width: 18px; height: 18px; }
 
+.opmodel-swiftee-avatar {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 18px;
+}
+
+.opmodel-swiftee-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.55;
+  border: 2px solid rgba(31, 107, 255, 0.25);
+  background-color: rgba(228, 236, 255, 0.6);
+}
+
+.opmodel-play-btn {
+  position: absolute;
+  left: -8px;
+  bottom: -6px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(135deg, #1f6bff 0%, #0ca2f9 100%);
+  box-shadow: 0 12px 26px -8px rgba(31, 107, 255, 0.65);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.opmodel-play-btn svg { margin-left: 1px; }
+
+.opmodel-play-btn:hover { transform: scale(1.08); }
+
+.opmodel-chip-logo { padding: 8px 16px; }
+
+.opmodel-chip-logo img {
+  width: auto;
+  height: 20px;
+}
+
 /* ===== section: skillsx ===== */
 
 .skillsx {
@@ -3867,20 +3948,97 @@ section[id] { scroll-margin-top: 96px; }
   color: #17c07b;
 }
 
-.skillsx-grid {
+.skillsx-layout {
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
   text-align: left;
+}
+
+.skillsx-grid {
+  flex: 1.7;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.skillsx-passport {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  position: sticky;
+  top: 110px;
+  text-align: center;
+}
+
+.skillsx-passport-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: rotate(-2deg);
+  box-shadow: 0px 24px 50px -20px rgba(10, 28, 70, 0.4);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.skillsx-passport-trigger:hover,
+.skillsx-passport-trigger:focus-visible {
+  transform: rotate(0deg) translateY(-4px) scale(1.03);
+  box-shadow: 0px 30px 60px -18px rgba(31, 107, 255, 0.5);
+}
+
+.skillsx-passport-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.skillsx-passport-hint {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 10px;
+  background-image: linear-gradient(to top, rgba(10, 28, 70, 0.85), transparent);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.skillsx-passport-trigger:hover .skillsx-passport-hint,
+.skillsx-passport-trigger:focus-visible .skillsx-passport-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skillsx-passport-caption {
+  margin: 16px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #5b6b90;
 }
 
 .skillsx-card {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 18px;
-  border-radius: 20px;
+  padding: 14px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.65);
   background-image: linear-gradient(140deg, rgba(255, 255, 255, 0.8) 0%, rgba(228, 236, 255, 0.5) 100%);
   cursor: pointer;
@@ -3906,25 +4064,25 @@ section[id] { scroll-margin-top: 96px; }
 .skillsx-name {
   font-family: 'Sora', sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13.5px;
   color: #0a1c46;
 }
 
 .skillsx-level {
   flex-shrink: 0;
-  padding: 2px 9px;
+  padding: 2px 8px;
   border-radius: 9999px;
   border: 1px solid rgba(31, 107, 255, 0.3);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 10px;
   color: #1f6bff;
   white-space: nowrap;
 }
 
 .skillsx-track {
   position: relative;
-  height: 10px;
-  margin-top: 12px;
+  height: 8px;
+  margin-top: 10px;
   border-radius: 9999px;
   background-color: #e7eefb;
   overflow: hidden;
@@ -3942,9 +4100,9 @@ section[id] { scroll-margin-top: 96px; }
 }
 
 .skillsx-desc {
-  margin: 12px 0 0;
-  font-size: 13px;
-  line-height: 1.55;
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
   color: #5b6b90;
 }
 
@@ -3981,6 +4139,105 @@ section[id] { scroll-margin-top: 96px; }
 .skillsx-card.is-max .skillsx-fill {
   background-image: linear-gradient(90deg, #17c07b, #22d3ee);
 }
+
+@media (max-width: 900px) {
+  .skillsx-layout { flex-direction: column; }
+
+  .skillsx-grid { width: 100%; }
+
+  .skillsx-passport {
+    position: static;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsx-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== lightbox (mission passport + Swiftee video) ===== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 28, 70, 0.72);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.lightbox-sheet {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  max-height: 88vh;
+  overflow: auto;
+  padding: 10px;
+  border-radius: 18px;
+  background-color: #ffffff;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.5);
+  transform: scale(0.85) rotateX(10deg);
+  transform-origin: top center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lightbox[data-open="true"] .lightbox-sheet {
+  transform: scale(1) rotateX(0deg);
+}
+
+.lightbox-sheet-video { max-width: 780px; background-color: #0a1c46; }
+
+.lightbox-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.lightbox-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background-color: #000000;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a1c46;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover { transform: scale(1.08); }
 
 /* ===== why: CBSE banner ===== */
 

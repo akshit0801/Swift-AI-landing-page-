@@ -225,6 +225,14 @@
         </a>
         <a class="hero-btn hero-btn-glass" href="#">Explore the Ecosystem</a>
       </div>
+      <div class="hero-certified gs-reveal">
+        <span class="hero-certified-label">Certified by</span>
+        <div class="hero-certified-logos">
+          <img src="assets/Google__G__logo.svg.webp" alt="Google" class="hero-certified-logo">
+          <img src="assets/Amazon_Web_Services_Logo.svg.webp" alt="AWS" class="hero-certified-logo">
+          <img src="assets/Adobe_Corporate_logo.svg.webp" alt="Adobe" class="hero-certified-logo">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -971,7 +979,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
     <div class="opmodel-flow gs-reveal">
       <button class="opmodel-node is-active" type="button">
         <span class="opmodel-node-num">Stage 1</span>
-        <span class="opmodel-node-title">Space Setup</span>
+        <span class="opmodel-node-title">Swiftee AI Companion</span>
       </button>
       <span class="opmodel-connector" aria-hidden="true">
         <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1018,14 +1026,23 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
     <div class="opmodel-detail gs-reveal">
       <div class="opmodel-panel is-active">
         <div class="opmodel-panel-main">
-          <h3 class="opmodel-panel-title">Space Setup</h3>
-          <p class="opmodel-panel-text">We fit out your innovation space with kits, activity cards, and displays - a plug-and-play environment ready for the first mission.</p>
+          <div class="opmodel-swiftee-avatar">
+            <img src="assets/learning swiftee.png" alt="Swiftee, the AI companion" class="opmodel-swiftee-img">
+            <button class="opmodel-play-btn" type="button" data-lightbox-trigger="swiftee-video" aria-label="Play Swiftee introduction video">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4.5 3.2v9.6c0 .73.8 1.17 1.42.79l7.68-4.8a.93.93 0 0 0 0-1.58l-7.68-4.8c-.62-.38-1.42.06-1.42.79Z" fill="#ffffff"/>
+              </svg>
+            </button>
+          </div>
+          <h3 class="opmodel-panel-title">Swiftee - AI Companion</h3>
+          <p class="opmodel-panel-text">Every student gets a friendly AI co-pilot that gives hints, checks reasoning, and nudges reflection - built into every mission from day one.</p>
         </div>
         <div class="opmodel-panel-side">
-          <p class="opmodel-panel-label">Powered by</p>
-          <div class="opmodel-chips">
-            <span class="opmodel-chip">Robotics &amp; Electronics Kits</span>
-            <span class="opmodel-chip">AI Companion Activity Cards</span>
+          <p class="opmodel-panel-label">Fueled by</p>
+          <div class="opmodel-chips opmodel-chips-logos">
+            <span class="opmodel-chip opmodel-chip-logo"><img src="assets/Amazon_Web_Services_Logo.svg.webp" alt="AWS"></span>
+            <span class="opmodel-chip opmodel-chip-logo"><img src="assets/Google__G__logo.svg.webp" alt="Google"></span>
+            <span class="opmodel-chip opmodel-chip-logo"><img src="assets/Adobe_Corporate_logo.svg.webp" alt="Adobe"></span>
           </div>
         </div>
       </div>
@@ -1094,6 +1111,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
     <p class="sk-sub gs-reveal">AI, robotics, and electronics are the medium. Future-ready skills are the real outcome.</p>
     <p class="skillsx-hint gs-reveal">&#9654; Tap a skill to train it - watch it level up, mission by mission.</p>
 
+    <div class="skillsx-layout">
     <div class="skillsx-grid">
       <button class="skillsx-card gs-reveal" type="button">
         <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
@@ -1156,8 +1174,49 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
         <p class="skillsx-desc">Students plan, track, and drive their own missions.</p>
       </button>
     </div>
+
+      <div class="skillsx-passport gs-reveal">
+        <button class="skillsx-passport-trigger" type="button" data-lightbox-trigger="passport" aria-haspopup="dialog">
+          <img src="assets/passport main.jpeg" alt="SKAI Space mission passport" class="skillsx-passport-img">
+          <span class="skillsx-passport-hint">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5.25 2.33H2.33v2.92M8.75 2.33h2.92v2.92M11.67 8.75v2.92H8.75M2.33 8.75v2.92h2.92" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            View Mission Passport
+          </span>
+        </button>
+        <p class="skillsx-passport-caption">Every skill trained here becomes a stamp in the student's Mission Passport.</p>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ===== lightboxes: mission passport + Swiftee video ===== -->
+<div class="lightbox" data-lightbox="passport" aria-hidden="true">
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-sheet" role="dialog" aria-modal="true" aria-label="Mission Passport detail">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 4L4 12" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M4 4L12 12" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <img src="assets/passport detailed.jpeg" alt="SKAI Space mission passport detail" class="lightbox-img">
+  </div>
+</div>
+
+<div class="lightbox" data-lightbox="swiftee-video" aria-hidden="true">
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-sheet lightbox-sheet-video" role="dialog" aria-modal="true" aria-label="Swiftee introduction video">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 4L4 12" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M4 4L12 12" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <video class="lightbox-video" data-lightbox-video src="assets/Video.mp4" controls playsinline></video>
+  </div>
+</div>
 
 
 <!-- ===== section: why ===== -->
