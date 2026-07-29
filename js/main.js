@@ -246,13 +246,6 @@
       timer = setInterval(function () { show((idx + 1) % nodes.length); }, 3500);
     };
 
-    nodes.forEach(function (n, i) {
-      n.addEventListener('click', function () {
-        clearInterval(timer);
-        show(i);
-        auto();
-      });
-    });
     auto();
   }
 
@@ -331,6 +324,39 @@
     });
   })();
 
+  /* ---------- Nav: mobile drawer menu ---------- */
+  (function () {
+    var toggle = document.querySelector('[data-drawer-toggle]');
+    var drawer = document.querySelector('[data-drawer]');
+    if (!toggle || !drawer) return;
+    var close = function () {
+      drawer.setAttribute('data-open', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    var open = function () {
+      drawer.setAttribute('data-open', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+      toggle.setAttribute('aria-expanded', 'true');
+    };
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      (drawer.getAttribute('data-open') === 'true') ? close() : open();
+    });
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', close);
+    });
+    document.addEventListener('click', function (e) {
+      if (!drawer.contains(e.target) && !toggle.contains(e.target)) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768) close();
+    });
+  })();
+
   /* ---------- Skills trainer ---------- */
   var LEVEL_XP = 20;
   var MAX_XP = 100;
@@ -386,7 +412,7 @@
     });
   });
 
-  /* ---------- Flying Swiftee — wanders the screen along a Lissajous path ---------- */
+  /* ---------- Flying Swiftee — wanders the screen along a Lissajous path, draggable by the user ---------- */
   (function () {
     var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var fly = document.querySelector('.swiftee-fly');
@@ -394,9 +420,27 @@
     var face = fly.querySelector('.swiftee-fly-face');
     var prevX = null;
     var ticking = false;
+    var userControlled = false;
+    var dragging = false;
+    var dragOffsetX = 0, dragOffsetY = 0;
+    var curX = 0, curY = 0;
+
+    function clamp(x, y) {
+      var vw = window.innerWidth, vh = window.innerHeight;
+      var bw = fly.offsetWidth, bh = fly.offsetHeight;
+      x = Math.max(8, Math.min(vw - bw - 8, x));
+      y = Math.max(96, Math.min(vh - bh - 16, y));
+      return [x, y];
+    }
+
+    function setPosition(x, y) {
+      curX = x; curY = y;
+      fly.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
+    }
 
     function place() {
       ticking = false;
+      if (userControlled) return;
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var t = max > 0 ? window.scrollY / max : 0;               /* 0 → 1 down the page */
       var vw = window.innerWidth, vh = window.innerHeight;
@@ -405,11 +449,10 @@
       /* two different frequencies → a gentle wandering (Lissajous) flight path */
       var x = vw * 0.5 + vw * 0.34 * Math.sin(t * Math.PI * 3.0) - bw / 2;
       var y = vh * 0.46 + vh * 0.30 * Math.sin(t * Math.PI * 5.0 + 0.9) - bh / 2;
+      var clamped = clamp(x, y);
+      x = clamped[0]; y = clamped[1];
 
-      x = Math.max(8, Math.min(vw - bw - 8, x));
-      y = Math.max(96, Math.min(vh - bh - 16, y));            /* keep clear of the top bar */
-
-      fly.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
+      setPosition(x, y);
       if (prevX !== null && Math.abs(x - prevX) > 0.4) {
         face.style.transform = (x < prevX) ? 'scaleX(-1)' : 'scaleX(1)';
       }
@@ -424,6 +467,43 @@
 
     place();
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', place);
+    window.addEventListener('resize', function () {
+      if (userControlled) {
+        var clamped = clamp(curX, curY);
+        setPosition(clamped[0], clamped[1]);
+      } else {
+        place();
+      }
+    });
+
+    /* ---- Drag support (mouse + touch via Pointer Events) ---- */
+    fly.addEventListener('pointerdown', function (e) {
+      dragging = true;
+      userControlled = true;
+      fly.classList.add('is-dragging');
+      fly.setPointerCapture(e.pointerId);
+      var rect = fly.getBoundingClientRect();
+      dragOffsetX = e.clientX - rect.left;
+      dragOffsetY = e.clientY - rect.top;
+      e.preventDefault();
+    });
+
+    fly.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var x = e.clientX - dragOffsetX;
+      var y = e.clientY - dragOffsetY;
+      var clamped = clamp(x, y);
+      setPosition(clamped[0], clamped[1]);
+    });
+
+    function endDrag(e) {
+      if (!dragging) return;
+      dragging = false;
+      fly.classList.remove('is-dragging');
+      try { fly.releasePointerCapture(e.pointerId); } catch (err) {}
+    }
+
+    fly.addEventListener('pointerup', endDrag);
+    fly.addEventListener('pointercancel', endDrag);
   })();
 })();

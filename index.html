@@ -168,6 +168,11 @@
       <a class="nav-link" href="#faq">FAQs</a>
     </nav>
     <div class="nav-actions">
+      <button class="nav-hamburger" type="button" data-drawer-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span class="nav-hamburger-bar"></span>
+        <span class="nav-hamburger-bar"></span>
+        <span class="nav-hamburger-bar"></span>
+      </button>
       <div class="nav-contact" data-contact>
         <button class="nav-btn nav-btn-demo" type="button" aria-haspopup="true" aria-expanded="false">
           Fascinated?
@@ -197,6 +202,13 @@
       </div>
     </div>
   </div>
+  <nav class="nav-drawer" id="nav-drawer" data-drawer aria-hidden="true" aria-label="Mobile">
+    <a class="nav-link nav-drawer-link" href="#hero">Ecosystem</a>
+    <a class="nav-link nav-drawer-link" href="#our-mission">Our Mission</a>
+    <a class="nav-link nav-drawer-link" href="#program">The Program</a>
+    <a class="nav-link nav-drawer-link" href="#why">Why SKAI</a>
+    <a class="nav-link nav-drawer-link" href="#faq">FAQs</a>
+  </nav>
 </header>
 
 <main class="page-main">
@@ -741,10 +753,8 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
     </div>
     <div class="svideo-media gs-reveal">
       <div class="svideo-frame" data-video>
-        <video class="svideo-video" src="assets/Video.mp4" preload="metadata" playsinline controls></video>
+        <video class="svideo-video" src="assets/SKAI_Space_Video.mp4" poster="assets/Thumbnail.png" preload="metadata" playsinline controls></video>
         <button class="svideo-poster" type="button" aria-label="Play: The Space That Changes How a Child Thinks">
-          <div class="svideo-grid" aria-hidden="true"></div>
-          <img class="svideo-poster-logo" src="assets/SKAI Logo.svg" alt="" aria-hidden="true">
           <span class="svideo-play" aria-hidden="true"><span class="svideo-play-tri"></span></span>
           <span class="svideo-cap"><span class="svideo-cap-dot" aria-hidden="true"></span>The Space That Changes How a Child Thinks</span>
         </button>
@@ -897,7 +907,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
     <header class="cycle-heading">
       <div class="sk-eyebrow gs-reveal"><span class="sk-eyebrow-dot"></span>The learning cycle</div>
       <h2 class="sk-title gs-reveal">From Curiosity to Creation</h2>
-      <p class="sk-sub gs-reveal">A repeatable loop students run on every mission - building the habit of learning how to learn. Tap a step, or watch the cycle turn.</p>
+      <p class="sk-sub gs-reveal">A repeatable loop students run on every mission - building the habit of learning how to learn. Watch the cycle turn.</p>
     </header>
     <div class="cycle-wrap gs-reveal">
       <div class="cycle-ring">
@@ -914,7 +924,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
           <path d="M77 150 A200 200 0 0 1 109 109" stroke="#1F6BFF" stroke-opacity="0.55" stroke-width="2.5" marker-end="url(#cycArrow)"/>
         </svg>
 
-        <button class="cycle-node cycle-node-1 is-active" type="button" data-title="Research &amp; Understand" data-text="Students observe, ask questions, and understand real-world problems.">
+        <button class="cycle-node cycle-node-1 is-active" type="button" tabindex="-1" aria-disabled="true" data-title="Research &amp; Understand" data-text="Students observe, ask questions, and understand real-world problems.">
           <span class="cycle-node-icon cycle-icon-blue">
             <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M11.9167 20.5833C16.7031 20.5833 20.5833 16.7031 20.5833 11.9167C20.5833 7.1302 16.7031 3.25 11.9167 3.25C7.1302 3.25 3.25 7.1302 3.25 11.9167C3.25 16.7031 7.1302 20.5833 11.9167 20.5833Z" stroke="#FFFFFF" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -924,7 +934,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
           <span class="cycle-node-label">01 - Research</span>
         </button>
 
-        <button class="cycle-node cycle-node-2" type="button" data-title="Make" data-text="Students build working models using robotics, electronics, coding, and engineering kits.">
+        <button class="cycle-node cycle-node-2" type="button" tabindex="-1" aria-disabled="true" data-title="Make" data-text="Students build working models using robotics, electronics, coding, and engineering kits.">
           <span class="cycle-node-icon cycle-icon-cyan">
             <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M15.925 6.825C15.7265 7.02751 15.6153 7.29977 15.6153 7.58333C15.6153 7.8669 15.7265 8.13916 15.925 8.34167L17.6583 10.075C17.8608 10.2735 18.1331 10.3847 18.4167 10.3847C18.7002 10.3847 18.9725 10.2735 19.175 10.075L23.2592 5.99083C23.8039 7.19462 23.9688 8.53584 23.732 9.83574C23.4952 11.1356 22.8678 12.3325 21.9335 13.2668C20.9992 14.2011 19.8023 14.8285 18.5024 15.0653C17.2025 15.3022 15.8613 15.1372 14.6575 14.5925L7.17167 22.0783C6.74069 22.5093 6.15616 22.7514 5.54667 22.7514C4.93717 22.7514 4.35264 22.5093 3.92167 22.0783C3.49069 21.6474 3.24857 21.0628 3.24857 20.4533C3.24857 19.8438 3.49069 19.2593 3.92167 18.8283L11.4075 11.3425C10.8628 10.1387 10.6978 8.7975 10.9347 7.49759C11.1715 6.19769 11.7989 5.00083 12.7332 4.06653C13.6675 3.13223 14.8644 2.50485 16.1643 2.268C17.4642 2.03116 18.8054 2.19609 20.0092 2.74083L15.9358 6.81417L15.925 6.825Z" stroke="#FFFFFF" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -933,7 +943,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
           <span class="cycle-node-label">02 - Make</span>
         </button>
 
-        <button class="cycle-node cycle-node-3" type="button" data-title="Innovate" data-text="Students test, fail, repair, improve, and adapt their solution.">
+        <button class="cycle-node cycle-node-3" type="button" tabindex="-1" aria-disabled="true" data-title="Innovate" data-text="Students test, fail, repair, improve, and adapt their solution.">
           <span class="cycle-node-icon cycle-icon-orange">
             <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M16.25 15.1667C16.4667 14.0833 17.0083 13.325 17.875 12.4583C18.9583 11.4833 19.5 10.075 19.5 8.66667C19.5 6.94276 18.8152 5.28946 17.5962 4.07047C16.3772 2.85149 14.7239 2.16667 13 2.16667C11.2761 2.16667 9.62279 2.85149 8.40381 4.07047C7.18482 5.28946 6.5 6.94276 6.5 8.66667C6.5 9.75 6.71667 11.05 8.125 12.4583C8.88333 13.2167 9.53333 14.0833 9.75 15.1667" stroke="#FFFFFF" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -944,7 +954,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
           <span class="cycle-node-label">03 - Innovate</span>
         </button>
 
-        <button class="cycle-node cycle-node-4" type="button" data-title="Reflect" data-text="Students explain what worked, what changed, and what skill they used.">
+        <button class="cycle-node cycle-node-4" type="button" tabindex="-1" aria-disabled="true" data-title="Reflect" data-text="Students explain what worked, what changed, and what skill they used.">
           <span class="cycle-node-icon cycle-icon-green">
             <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M3.25 3.25V20.5833C3.25 21.158 3.47827 21.7091 3.8846 22.1154C4.29093 22.5217 4.84203 22.75 5.41667 22.75H22.75" stroke="#FFFFFF" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1109,84 +1119,19 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
     <div class="sk-eyebrow gs-reveal"><span class="sk-eyebrow-dot"></span>The outcomes that last</div>
     <h2 class="sk-title gs-reveal">Skills Students Carry Beyond the Room</h2>
     <p class="sk-sub gs-reveal">AI, robotics, and electronics are the medium. Future-ready skills are the real outcome.</p>
-    <p class="skillsx-hint gs-reveal">&#9654; Tap a skill to train it - watch it level up, mission by mission.</p>
+    <p class="skillsx-hint gs-reveal">&#9654; Every skill trained becomes a stamp in the student's Mission Passport.</p>
 
-    <div class="skillsx-layout">
-    <div class="skillsx-grid">
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Critical Thinking</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students weigh evidence before deciding what to build.</p>
+    <div class="skillsx-passport skillsx-passport-solo gs-reveal">
+      <button class="skillsx-passport-trigger" type="button" data-lightbox-trigger="passport" aria-haspopup="dialog">
+        <img src="assets/passport-page-1.jpg" alt="SKAI Space Future Explorer mission passport cover" class="skillsx-passport-img">
+        <span class="skillsx-passport-hint">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M5.25 2.33H2.33v2.92M8.75 2.33h2.92v2.92M11.67 8.75v2.92H8.75M2.33 8.75v2.92h2.92" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          View Mission Passport
+        </span>
       </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">AI Literacy</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students learn where AI helps, where it fails, and why human judgment matters.</p>
-      </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Robotics</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students practise sequencing, debugging, automation, and control.</p>
-      </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Electronics</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students understand cause, effect, circuits, testing, and troubleshooting.</p>
-      </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Communication</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students explain how their solution works and why it matters.</p>
-      </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Collaboration</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students divide roles, share tools, and build together.</p>
-      </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Creativity</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students invent new approaches when the obvious one fails.</p>
-      </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Judgment</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students decide when a design is safe, fair, and good enough.</p>
-      </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Problem Solving</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students break big challenges into testable steps.</p>
-      </button>
-      <button class="skillsx-card gs-reveal" type="button">
-        <span class="skillsx-xp" aria-hidden="true">+17 XP</span>
-        <div class="skillsx-head"><span class="skillsx-name">Self-Direction</span><span class="skillsx-level">Lv 1</span></div>
-        <div class="skillsx-track"><span class="skillsx-fill"></span></div>
-        <p class="skillsx-desc">Students plan, track, and drive their own missions.</p>
-      </button>
-    </div>
-
-      <div class="skillsx-passport gs-reveal">
-        <button class="skillsx-passport-trigger" type="button" data-lightbox-trigger="passport" aria-haspopup="dialog">
-          <img src="assets/passport main.jpeg" alt="SKAI Space mission passport" class="skillsx-passport-img">
-          <span class="skillsx-passport-hint">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M5.25 2.33H2.33v2.92M8.75 2.33h2.92v2.92M11.67 8.75v2.92H8.75M2.33 8.75v2.92h2.92" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            View Mission Passport
-          </span>
-        </button>
-        <p class="skillsx-passport-caption">Every skill trained here becomes a stamp in the student's Mission Passport.</p>
-      </div>
+      <p class="skillsx-passport-caption">Every skill trained here becomes a stamp in the student's Mission Passport.</p>
     </div>
   </div>
 </section>
@@ -1194,14 +1139,17 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
 <!-- ===== lightboxes: mission passport + Swiftee video ===== -->
 <div class="lightbox" data-lightbox="passport" aria-hidden="true">
   <div class="lightbox-backdrop" data-lightbox-close></div>
-  <div class="lightbox-sheet" role="dialog" aria-modal="true" aria-label="Mission Passport detail">
+  <div class="lightbox-sheet lightbox-sheet-passport" role="dialog" aria-modal="true" aria-label="Mission Passport detail">
     <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M12 4L4 12" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
         <path d="M4 4L12 12" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
       </svg>
     </button>
-    <img src="assets/passport detailed.jpeg" alt="SKAI Space mission passport detail" class="lightbox-img">
+    <div class="lightbox-passport-pages">
+      <img src="assets/passport-page-2.jpg" alt="Mission Passport page 2 - student profile" class="lightbox-img">
+      <img src="assets/passport-page-3.jpg" alt="Mission Passport page 3 - mission progress stamps" class="lightbox-img">
+    </div>
   </div>
 </div>
 
@@ -1214,7 +1162,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
         <path d="M4 4L12 12" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
       </svg>
     </button>
-    <video class="lightbox-video" data-lightbox-video src="assets/Video.mp4" controls playsinline></video>
+    <video class="lightbox-video" data-lightbox-video src="assets/SKAI_Space_Video.mp4" poster="assets/SKAI_Space_Video_Thumb.jpg" controls playsinline preload="none"></video>
   </div>
 </div>
 
@@ -1623,7 +1571,7 @@ l-18 72 32 65 c36 75 53 93 99 103 28 6 32 4 32 -14 0 -12 6 -21 13 -21 17 0
 <!-- Flying Swiftee companion -->
 <div class="swiftee-fly" aria-hidden="true">
   <div class="swiftee-fly-face">
-    <img class="swiftee-fly-img" src="assets/learning swiftee.png" alt="" />
+    <img class="swiftee-fly-img" src="assets/learning swiftee.png" alt="" draggable="false" />
   </div>
 </div>
 
