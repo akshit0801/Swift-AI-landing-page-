@@ -556,10 +556,10 @@
 
 .hero-eyebrow-text {
   font-family: 'Sora', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.1px;
+  font-weight: 800;
+  font-size: 20.8px;
+  line-height: 28.6px;
+  letter-spacing: -0.13px;
   color: #1f6bff;
   white-space: nowrap;
 }
@@ -576,9 +576,9 @@
 
 .hero-title-line {
   display: block;
-  font-size: 60px;
-  line-height: 59px;
-  letter-spacing: -1.2px;
+  font-size: 42px;
+  line-height: 41.3px;
+  letter-spacing: -0.84px;
   white-space: nowrap;
 }
 
@@ -586,7 +586,7 @@
    gradient line starts one full line-height below line 1. */
 .hero-title-gradient {
   display: block;
-  margin-top: 59px;
+  margin-top: 41.3px;
   max-width: 520px;
   background-image: linear-gradient(125.39deg, #0a1c46 6.17%, #1f6bff 54.38%, #22d3ee 93.83%);
   -webkit-background-clip: text;
@@ -985,19 +985,19 @@
   }
 
   .hero-title-line {
-    font-size: 37px;
-    line-height: 39px;
-    letter-spacing: -0.7px;
+    font-size: 25.9px;
+    line-height: 27.3px;
+    letter-spacing: -0.49px;
     white-space: normal;
   }
 
   .hero-title-gradient {
-    margin-top: 39px;
+    margin-top: 27.3px;
   }
 
   .hero-eyebrow-text {
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 18.2px;
+    line-height: 24.7px;
   }
 
   .hero-cta {
